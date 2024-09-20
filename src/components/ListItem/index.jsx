@@ -1,16 +1,20 @@
 import React from 'react';
 import styles from './listItem.module.scss';
 
-const ListItem = ({ task, complete }) => {
+const ListItem = ({ task, complete, onRemove, onComplete }) => {
   return (
     <div className={styles.listItem}>
-      <div className={styles.check}>
-        {!complete ? (
-          <img src='./images/checkbox.png' alt='Checkbox' />
-        ) : (
-          <img src='./images/checkbox-checked.png' alt='Checkbox' />
-        )}
-
+      <div
+        className={styles.check}
+        onClick={onComplete}
+        style={{ cursor: 'pointer' }}
+      >
+        <img
+          src={
+            complete ? './images/checkbox-checked.png' : './images/checkbox.png'
+          }
+          alt='Checkbox'
+        />
         <span
           className={`${styles.task} ${complete ? styles.taskCompleted : ''}`}
         >
@@ -22,6 +26,7 @@ const ListItem = ({ task, complete }) => {
         src='./images/trash-icon.png'
         alt='Delete'
         style={{ cursor: 'pointer' }}
+        onClick={onRemove}
       />
     </div>
   );

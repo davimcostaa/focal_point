@@ -6,6 +6,12 @@
 
 .modalContent {
   @include modal-content-base;
+
+  p {
+    color: $text-color-gray;
+    margin: 0;
+    font-size: 16px;
+  }
 }
 
 .buttons {
