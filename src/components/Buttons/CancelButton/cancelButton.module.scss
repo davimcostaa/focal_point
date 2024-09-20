@@ -1,0 +1,8 @@
+@import '../../../app/variables.scss';
+
+.button {
+  @include button-styles;
+  background-color: $button-gray;
+
+  color: #000000;
+}

@@ -1,0 +1,21 @@
+@import '../../app/variables.scss';
+
+.input {
+  height: 51px;
+  width: 386px;
+  border-radius: 8px;
+  border: 1px solid $light-gray;
+  font-size: 16px;
+  padding-left: 10px;
+  letter-spacing: $letter-spacing-close;
+  margin-top: 4px;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: $letter-spacing-close;
+}

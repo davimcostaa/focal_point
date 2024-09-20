@@ -1,0 +1,19 @@
+@import '../../../app/variables.scss';
+
+.modal {
+  @include modal-base;
+}
+
+.modalContent {
+  @include modal-content-base;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}

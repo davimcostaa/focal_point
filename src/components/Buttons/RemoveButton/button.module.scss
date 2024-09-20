@@ -1,0 +1,12 @@
+@import '../../../app/variables.scss';
+
+.button {
+  @include button-styles;
+  background: $gradient-red-background;
+}
+
+@media (max-width: 600px) {
+  .button {
+    padding: 8px 12px;
+  }
+}

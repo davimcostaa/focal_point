@@ -1,0 +1,46 @@
+@import '../../app/variables.scss';
+
+.listItem {
+  min-width: 386px;
+  min-height: 56px;
+  border-radius: 8px;
+  background-image: url('/images/border-dotted.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 16px;
+
+  &:hover {
+    background-image: none;
+    background-color: $hover-gray;
+  }
+}
+
+.task {
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: $letter-spacing-close;
+  font-weight: 400;
+}
+
+.taskCompleted {
+  text-decoration: line-through;
+  color: $text-color-gray;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .listItem {
+    width: 100%;
+    background-image: none;
+    border: 1px dotted $light-gray;
+  }
+}

@@ -1,0 +1,43 @@
+@import '../../app/variables.scss';
+
+.header {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  margin: 10px 30px;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $light-gray;
+
+  h3 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    flex-grow: 2;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    letter-spacing: $letter-spacing-close;
+  }
+
+  p {
+    color: $text-color-gray;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 114px;
+    margin: 20px 24px;
+    padding-bottom: 20px;
+    align-items: flex-start;
+
+    gap: 1px;
+    font-size: 16px;
+    h3 {
+      font-size: 20px;
+      flex-grow: 0;
+    }
+  }
+}
